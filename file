@@ -1,0 +1,399 @@
+2.
+img {
+    border: 2px dashed #333; 
+    border-radius: 10px; 
+    filter: grayscale(100%); 
+}
+
+3.
+/* Default font size for the entire page */
+body {
+    font-size: 16px;
+}
+
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+4.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Different Cursors</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .cursor-example {
+            width: 150px;
+            height: 150px;
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            line-height: 150px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        /* Different cursor styles */
+        .cursor-pointer { cursor: pointer; }
+        .cursor-help { cursor: help; }
+        .cursor-crosshair { cursor: crosshair; }
+        .cursor-move { cursor: move; }
+        .cursor-not-allowed { cursor: not-allowed; }
+        .cursor-progress { cursor: progress; }
+        .cursor-text { cursor: text; }
+        .cursor-wait { cursor: wait; }
+        .cursor-zoom-in { cursor: zoom-in; }
+        .cursor-zoom-out { cursor: zoom-out; }
+    </style>
+</head>
+<body>
+
+<div class="cursor-example cursor-pointer">Pointer</div>
+<div class="cursor-example cursor-help">Help</div>
+<div class="cursor-example cursor-crosshair">Crosshair</div>
+<div class="cursor-example cursor-move">Move</div>
+<div class="cursor-example cursor-not-allowed">Not Allowed</div>
+<div class="cursor-example cursor-progress">Progress</div>
+<div class="cursor-example cursor-text">Text</div>
+<div class="cursor-example cursor-wait">Wait</div>
+<div class="cursor-example cursor-zoom-in">Zoom In</div>
+<div class="cursor-example cursor-zoom-out">Zoom Out</div>
+
+</body>
+</html>
+5.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model Example</title>
+    <style>
+        /* Include the box-model-properties class for all div tags */
+        div {
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        }
+
+        .box-model-properties {
+            padding: 10px;
+            margin: 10px;
+            border: 2px solid #3498db;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Apply the box-model-properties class to div elements -->
+<div class="box-model-properties">Box Model Example 1</div>
+<div class="box-model-properties">Box Model Example 2</div>
+<div class="box-model-properties">Box Model Example 3</div>
+
+</body>
+</html>
+
+6.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Hover Effects</title>
+    <style>
+        /* Include the mouse-hover-effects class for span tags */
+        .mouse-hover-effects {
+            transition: all 0.3s ease-in-out; /* Add smooth transition for a gradual effect */
+        }
+
+        .mouse-hover-effects:hover {
+            font-size: 18px;
+            color: #ff6347;
+            font-family: 'Arial', sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Apply the mouse-hover-effects class to span elements -->
+<p>This is a <span class="mouse-hover-effects">span</span> tag with mouse hover effects.</p>
+
+</body>
+</html>
+7.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move Element with translate()</title>
+    <style>
+        /* Include the move-element class for the element */
+        .move-element {
+            transform: translate(50px, 20px);
+            /* Additional styling if needed */
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Apply the move-element class to the HTML element -->
+<div class="move-element">Move me!</div>
+
+</body>
+</html>
+8.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooltip Example</title>
+    <style>
+        /* Include the tooltip class for elements with tooltips */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+
+        .tooltip:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            background-color: #333;
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            opacity: 0.9;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Apply the tooltip class and include the data-tooltip attribute for elements with tooltips -->
+<div class="tooltip" data-tooltip="This is a tooltip">Hover me</div>
+
+</body>
+</html>
+
+12.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image Example</title>
+    <style>
+        /* Include the background image CSS rule for the body */
+        body {
+            background-image: url('download.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0; /* Remove default margin */
+            height: 100vh; /* Set height to 100% of the viewport height */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Your HTML content goes here -->
+
+</body>
+</html>
+
+13.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Example</title>
+    <style>
+        /* Include the flex-container and flex-item classes */
+        .flex-container {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        .flex-item {
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid #3498db;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Apply the flex-container class to the div element -->
+<div class="flex-container">
+    <div class="flex-item">Item 1</div>
+    <div class="flex-item">Item 2</div>
+    <div class="flex-item">Item 3</div>
+</div>
+
+</body>
+</html>
+
+14.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Border Example</title>
+    <style>
+        /* Include the .border-div class */
+        .border-div {
+            width: 200px;
+            height: 150px;
+            border-width: 30px;
+            border-style: solid;
+            border-image: url('path/to/border.png') stretch;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Apply the .border-div class to the div element -->
+<div class="border-div">
+    <!-- Your content goes here -->
+</div>
+
+</body>
+</html>
+
+15.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rounded Corner Example</title>
+    <style>
+        /* Include the .rounded-corner-div class */
+        .rounded-corner-div {
+            width: 200px;
+            height: 150px;
+            border-radius: 0 0 25px 0;
+            background-color: #3498db;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Apply the .rounded-corner-div class to the div element -->
+<div class="rounded-corner-div">
+    <!-- Your content goes here -->
+</div>
+
+</body>
+</html>
+
+17.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absolute Positioning Example</title>
+    <style>
+        /* Include the .absolute-right-div class */
+        .absolute-right-div {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 150px;
+            background-color: #3498db;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Apply the .absolute-right-div class to the div element -->
+<div class="absolute-right-div">
+    <!-- Your content goes here -->
+</div>
+
+</body>
+</html>
+
+18.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrollbar Example</title>
+    <style>
+        /* Include the .scrollbar-div class */
+        .scrollbar-div {
+            width: 200px;
+            height: 150px;
+            overflow: auto;
+            border: 1px solid #3498db;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Apply the .scrollbar-div class to the div element -->
+<div class="scrollbar-div">
+    <!-- Your content goes here -->
+    <!-- Add more content to see the scrollbar in action -->
+</div>
+
+</body>
+</html>
+
+19.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Background Example</title>
+    <style>
+        /* Include the .gradient-background-div class */
+        .gradient-background-div {
+            width: 200px;
+            height: 150px;
+            background: linear-gradient(to bottom, white, red, blue, green);
+        }
+    </style>
+</head>
+<body>
+
+<!-- Apply the .gradient-background-div class to the div element -->
+<div class="gradient-background-div">
+    <!-- Your content goes here -->
+</div>
+
+</body>
+</html>
+
+
